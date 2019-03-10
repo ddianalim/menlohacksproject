@@ -6,13 +6,10 @@
   margin-bottom: 15px;
 }
 
-.day-breadcrumb {
-  margin: 45px 0 35px;
-}
-
 .some-margin {
   margin: 50px;
 }
+
 
 a {
   color: black;
@@ -59,4 +56,8 @@ body {
 
 .show-more {
   display: inline-block;
+}
+
+#gratitudeList {
+  padding: 0 20%;
 }
