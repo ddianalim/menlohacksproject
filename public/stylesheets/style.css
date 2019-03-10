@@ -9,3 +9,29 @@
 .day-breadcrumb {
   margin: 45px 0 35px;
 }
+
+/* .calendar {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.calendar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.calendar::after {
+  content: "";
+  flex: auto;
+}
+
+.calendar .item {
+  float: left;
+   flex: 1 1 calc(14.2857143%);
+}
+
+.calendar .item img {
+  height: 150px;
+  width: 150px;
+}

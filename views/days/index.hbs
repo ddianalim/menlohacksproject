@@ -2,26 +2,33 @@
   <h1 class="page-title">Calendar</h1>
 </div>
 
-<div class="row">
-<div class="col-2">
-  <img class="card-img" src="/images/add.png" alt="Card image">
-  <div class="card-img-overlay day text-right">
-      <div class="card-body">
-        <a class="card-link" href="/days/new"></a>
-      </div>
-  </div>
-</div>
+<div class="calendar">
 
-    {{#each days}}
-        <!-- <div class="col-12 col-md-6 col-lg-4"> -->
-          <div class="col-2">
-            <img class="card-img" src="/images/icon.png" alt="Card image">
-            <!-- <div class="card day text-right"> -->
-            <div class="card-img-overlay day text-right">
-                <div class="card-body">
-                  <a class="card-link" href="/days/{{this._id}}">{{this.date}}</a>
-                </div>
-            </div>
-        </div>
-    {{/each}}
-</div>
+  <div class="item">Sunday</div>
+  <div class="item">Monday</div>
+  <div class="item">Tuesday</div>
+  <div class="item">Wednesday</div>
+  <div class="item">Thursday</div>
+  <div class="item">Friday</div>
+  <div class="item">Saturday</div>
+
+ {{#each days}}
+    <div class="item">
+      <a class="card-link" href="/days/{{this._id}}">{{this.date}}
+        <img class="card-img" src="/images/icon.png" alt="Card image">
+      </a>
+    </div>
+  {{/each}}
+
+  <div class="item">
+    <a class="card-link" href="/days/new">
+      <img class="card-img" src="/images/add.png" alt="Card image">
+    </a>
+  </div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
