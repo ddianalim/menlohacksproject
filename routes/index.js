@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const Day = require('../models/day');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Perfectly Positive' });
@@ -15,11 +17,23 @@ router.get('/days/new', (req, res) => {
 router.post('/days', (req, res) => {
   const day = new Day(req.body);
 
-  review.save(function(err, day) {
+  day.save(function(err, day) {
     if (err) {
       console.log(err);
     }
-
     return res.redirect('/days/' + day._id);
   });
 });
+
+router.get('/days/:id', (req, res) => {
+  Day.findById(req.params.id, (err, day) => {
+    if (err) {
+      console.log(err);
+    }
+    res.render('days/show', {
+      day: day
+    });
+  });
+});
+
+module.exports = router;
