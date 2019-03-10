@@ -7,6 +7,27 @@
   </div>
 
   <div style="text-align: center; margin: 10px;">
+    <script>
+      var level = "{{day.mindfulness}}";
+
+        function showFeelings() {
+          if(level == "9DE09E") {
+            document.getElementById("feeling").innerHTML = "Terrible";
+          } else if(level == "CFE9AA") {
+            document.getElementById("feeling").innerHTML = "Not good";
+          } else if(level == "F6F0B3") {
+            document.getElementById("feeling").innerHTML = "Alright";
+          } else if(level == "F4C4A4") {
+            document.getElementById("feeling").innerHTML = "Pretty Good";
+          } else {
+            document.getElementById("feeling").innerHTML = "Happy";
+          }
+        }
+        showFeelings();
+      </script>
+
+      <p id="feeling">{{day.mindfulness}}</p>
+
     <h2>
       <script>
         var today = new Date("{{day.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
