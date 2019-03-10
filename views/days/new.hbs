@@ -1,3 +1,132 @@
+<body>
+  <div class="section cover">
+    <div class="row justify-content-around text-center">
+      <h1 class="page-title">
+        <script> document.write(new Date().toDateString()); </script>
+      </h1>
+    </div>
+  </div>
+
+  <div class="section first-section">
+    <h2>Breathe</h2>
+    <div class="circle"></div>
+    <h1><time class="text-center count">00:00</time></h1>
+  </div>
+
+  <div class="section second-section">
+    <div class="row justify-content-around text-center">
+      <h2>Mindfulness</h2>
+    </div>
+  </div>
+
+  <div class="section third-section">
+    <div class="row justify-content-center text-center">
+        <h2>Gratitude</h2>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <form method="POST" action="/days">
+                <div class="form-row">
+                    <div class="form-group col-8 col-lg-6">
+                    </div>
+                </div>
+
+               <div class="form-group">
+                  <label for="gratitude1">This made me smile...</label>
+                  <textarea name="gratitude1" class="form-control" id="gratitude1" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="gratitude2">What keeps me going...</label>
+                  <textarea name="gratitude2" class="form-control" id="gratitude2" rows="3"></textarea>
+             </div>
+             <div class="form-group">
+                <label for="gratitude3">I'm looking forward to...</label>
+                <textarea name="gratitude3" class="form-control" id="gratitude3" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="post-date">Date</label>
+              <input type="date" name="date" class="input-text" id="date" placeholder="mm/dd/yyyy" required>
+              <span class="validity"></span>
+            </div>
+
+                  <button type="submit" class="btn btn-primary">Finished!</button>
+              </form>
+        </div>
+  </div>
+</body>
+
+<style>
+.cover {
+  background-image: linear-gradient(#96e09a, #f9f1b1);
+  min-height: 300px;
+}
+
+.first-section {
+  background-image: linear-gradient(#ac96e0, #96cde0);
+  min-height: 700px;
+}
+
+.second-section {
+  background-image: linear-gradient(#96e09a, #f9f1b1);
+  min-height: 400px;
+}
+
+.third-section {
+  background-image: linear-gradient(#efca8f, #ef908f);
+  min-height: 400px;
+}
+
+.section {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  margin-top: 20%;
+  margin-left: 46%;
+  border-radius: 50%;
+  background-image: radial-gradient(#9bdcff, #eaf7ff);
+  animation: circle 4s ease alternate infinite;
+}
+
+@keyframes circle {
+  0% { transform: translate(0, 0); }
+  100% { transform: scale(4); }
+}
+
+</style>
+<script>
+  var h1 = document.getElementsByClassName('count')[0], seconds = 0, minutes = 0, t;
+
+  function add() {
+      seconds++;
+      if (seconds >= 60) {
+          seconds = 0;
+          minutes++;
+          if (minutes >= 60) {
+              minutes = 0;
+          }
+      }
+
+      h1.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+      timer();
+  }
+
+  function timer() {
+      t = setTimeout(add, 1000);
+  }
+  timer();
+</script>
+
+<!--
 <div class="row">
     <div class="col">
         <h1 class="page-title">
@@ -7,15 +136,11 @@
 </div>
 
 <div class="row">
-    <div class="col">
       <h2>Breathe</h2>
-    </div>
 </div>
 
 <div class="row">
-    <div class="col">
       <h2>Mindfulness</h2>
-    </div>
 </div>
 
 <div class="row">
@@ -54,4 +179,4 @@
               <button type="submit" class="btn btn-primary">Finished!</button>
           </form>
     </div>
-</div>
+</div> -->
