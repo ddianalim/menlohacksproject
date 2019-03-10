@@ -15,27 +15,15 @@
    {{#each days}}
       <div class="item">
           <a href="/days/{{this._id}}">
+            <style>
+            .card-img{
+              background-color: {{this.mindfulness}};
+            }
+            </style>
+            <div class="card-img" style="opacity: 50%; height: 100px; width: 100px;"></div>
+            
             <script class="test">
-              var level = "{{this.mindfulness}}", icon ='';
-              function changeIcon() {
-                if (level == 1) {
-                  document.getElementsByClassName("card-img").innerHTML='<div style="background-color: red; height: 100px; width: 100px;"></div>';
-                } else if (level == 2) {
-                  document.getElementsByClassName("card-img").innerHTML='<div style="background-color: orange; height: 100px; width: 100px;"></div>';
-                } else if (level == 3) {
-                  document.getElementsByClassName("card-img").innerHTML='<div style="background-color: yellow; height: 100px; width: 100px;"></div>';
-                } else if (level == 4) {
-                  document.getElementsByClassName("card-img").innerHTML='<div style="background-color: green; height: 100px; width: 100px;"></div>';
-                } else {
-                  document.getElementsByClassName("card-img").innerHTML='<div style="background-color: blue; height: 100px; width: 100px;"></div>';
-                }
-              }
-              changeIcon();
-            </script>
-
-            <div class="card-img"><div style="background-color: grey; height: 100px; width: 100px;"></div></div>
-
-            <script class="test">
+            console.log("{{this.mindfulness}}");
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
               if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
               } else if (mm == 4) { month = 'April'; } else if (mm == 5) { month = 'May'; } else if (mm == 6) { month = 'June';
