@@ -8,17 +8,8 @@
     {{#each days}}
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card day">
-                <div class="card-header text-muted">
-                    <span class="badge badge-rating">{{this.date}}</span>
-                </div>
                 <div class="card-body">
-                  <ul>
-                    <li class="card-text">{{this.gratitude1}}</li>
-                    <li class="card-text">{{this.gratitude2}}</li>
-                    <li class="card-text">{{this.gratitude3}}</li>
-                  </ul>
-
-                  <a class="card-link" href="/days/{{this._id}}">Read More</a>
+                  <a class="card-link" href="/days/{{this._id}}">{{this.date}}</a>
                 </div>
             </div>
         </div>
