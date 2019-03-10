@@ -4,11 +4,18 @@ var router = express.Router();
 const Day = require('../models/day');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Perfectly Positive' });
-});
+router.get('/', (req, res) => {
+  // 1
+  Day.find({}, (err, days) => {
+    if (err) {
+      console.log(err);
+    }
 
-module.exports = router;
+    res.render('days/index', {
+      days: days
+    });
+  });
+});
 
 router.get('/days/new', (req, res) => {
   res.render('days/new');
@@ -21,6 +28,7 @@ router.post('/days', (req, res) => {
     if (err) {
       console.log(err);
     }
+
     return res.redirect('/days/' + day._id);
   });
 });
