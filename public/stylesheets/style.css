@@ -14,12 +14,16 @@
   margin: 50px;
 }
 
+h2 {
+}
+
 body {
     margin: 0!important;
     margin-top: 0px!important;
     margin-right: 0px!important;
     margin-bottom: 0px!important;
     margin-left: 0px!important;
+    font-family: serif;
 }
 
 .calendar {
