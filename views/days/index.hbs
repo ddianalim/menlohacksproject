@@ -1,5 +1,5 @@
 <div class="some-margin">
-  <div class="post-index">
+  <div class="post-index" style="text-align: center;">
     <h1 class="page-title">Calendar</h1>
   </div>
 
@@ -7,15 +7,16 @@
     <h2 class="item">Sunday</h2>
     <h2 class="item">Monday</h2>
     <h2 class="item">Tuesday</h2>
-    <div class="item">Wednesday</div>
-    <div class="item">Thursday</div>
-    <div class="item">Friday</div>
-    <div class="item">Saturday</div>
+    <h2 class="item">Wednesday</h2>
+    <h2 class="item">Thursday</h2>
+    <h2 class="item">Friday</h2>
+    <h2 class="item">Saturday</h2>
 
    {{#each days}}
       <div class="item">
           <a href="/days/{{this._id}}">
-            <script>
+            <img class="card-img" src="/images/icon.png" alt="Card image">
+            <script class="test">
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
               if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
               } else if (mm == 4) { month = 'April'; } else if (mm == 5) { month = 'May'; } else if (mm == 6) { month = 'June';
@@ -24,13 +25,13 @@
               today = month + ' ' + dd + ', ' + yyyy;
               document.write(today);
             </script>
-          <img class="card-img" src="/images/icon.png" alt="Card image">
         </a>
       </div>
     {{/each}}
 
     <div class="item">
-      <a class="card-link" href="/days/new">
+      <a href="/days/new">
+        <img class="card-img" src="/images/add.png" alt="Card image">
           <script>
             var today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
             if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
@@ -40,7 +41,6 @@
             today = month + ' ' + dd + ', ' + yyyy;
           document.write(today);
           </script>
-        <img class="card-img" src="/images/add.png" alt="Card image">
       </a>
     </div>
     <div class="item"></div>
