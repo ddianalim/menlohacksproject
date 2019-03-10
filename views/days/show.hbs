@@ -6,8 +6,8 @@
     <img src="/images/icon.png" alt="Card image" width="100" height="100">
   </div>
 
-  <div>
-    <h2 style="text-align: center; margin: 10px;">
+  <div style="text-align: center; margin: 10px;">
+    <h2>
       <script>
         var today = new Date("{{day.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
         if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
@@ -18,6 +18,10 @@
         document.write(today);
       </script>
     </h2>
+  </div>
+
+  <div style="text-align: center;">
+    <p>My aspiration for today: {{day.aspiration}}</p>
   </div>
 
   <div id="gratitudeList">
