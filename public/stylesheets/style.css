@@ -58,6 +58,17 @@ body {
   display: inline-block;
 }
 
+#progress {
+  width: 100%;
+}
+
+#bar {
+  width: 1%;
+  height: 5px;
+  margin:-5px 0 5px 0;
+  background-color: #fff;
+}
+
 #gratitudeList {
   padding: 0 20%;
 }
