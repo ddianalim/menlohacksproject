@@ -2,10 +2,6 @@
 
 <div class="some-margin">
 
-  <div align="center">
-    <div style="opacity: 50%; height: 100px; width: 100px; background-color: #{{day.mindfulness}};"></div>
-  </div>
-
   <div style="text-align: center; margin: 10px;">
 
     <h2>
@@ -21,8 +17,14 @@
     </h2>
   </div>
 
-  <div style="text-align: center;">
-    <p id="feeling">Today I feel {{day.mindfulness}}</p>
+  <div align="center">
+    <div style="opacity: 50%; height: 100px; width: 100px; background-color: #{{day.mindfulness}};"></div>
+  </div>
+
+  <div id="mindfulnessList">
+    <h4>Mindfulness</h4>
+    <ul>
+      <li id="feeling">Today I feel {{day.mindfulness}}</li>
 
     <script>
       var level = "{{day.mindfulness}}";
@@ -43,14 +45,14 @@
         showFeelings();
       </script>
 
-    <p>I feel this way because: {{day.feeling}}</p>
+      <li>I feel this way because: {{day.feeling}}</li>
+      <li>My aspiration for today: {{day.aspiration}}</li>
+    </ul>
   </div>
 
-  <div style="text-align: center;">
-    <p>My aspiration for today: {{day.aspiration}}</p>
-  </div>
 
   <div id="gratitudeList">
+    <h4>Gratitude</h4>
       <ol>
           <li>{{day.gratitude1}}</li>
           <li>{{day.gratitude2}}</li>

@@ -74,6 +74,10 @@ body {
   padding: 0 20%;
 }
 
+#mindfulnessList {
+  padding: 0 20%;
+}
+
 .btn-outline {
   border-color: grey;
 }
