@@ -29,7 +29,8 @@ body {
     margin-right: 0px!important;
     margin-bottom: 0px!important;
     margin-left: 0px!important;
-    font-family: serif;
+    font-family: "HelveticaNeue-Light";
+/*     font-family: serif; */
 }
 
 .calendar {
@@ -46,4 +47,8 @@ body {
 .calendar .item img {
   height: 150px;
   width: 150px;
+}
+
+.show-more {
+  display: inline-block;
 }
