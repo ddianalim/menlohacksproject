@@ -26,7 +26,7 @@
   <div class="section first-section" id="breathe">
     <h2>Breathe</h2>
     <div class="circle"></div>
-    <h1><time class="text-center count">00:00</time></h1>
+    <h1><time class="text-center count">01:00</time></h1>
     <a class="button text-center" href="#mindfulness"><h4>▼</h4></a>
   </div>
 
@@ -105,9 +105,9 @@ a:hover {
   min-height: 640px;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repe5;
   background-size: cover;
-  margin:  0;
+  margin: -.5em 0 0 0;
   padding-top: 5em;
 }
 
@@ -118,7 +118,7 @@ a:hover {
   margin-left: 47%;
   border-radius: 50%;
   background-image: radial-gradient(#eee, #fff);
-  animation: circle 4s ease alternate infinite;
+  animation: circle 3.5s ease-in-out alternate infinite;
 }
 
 @keyframes circle {
@@ -128,18 +128,32 @@ a:hover {
 
 </style>
 <script>
-  var h1 = document.getElementsByClassName('count')[0], seconds = 0, minutes = 0, t;
+  // var h1 = document.getElementsByClassName('count')[0], seconds = 0, minutes = 0, t;
+  // function add() {
+  //     seconds++;
+  //     if (seconds >= 60) {
+  //         seconds = 0;
+  //         minutes++;
+  //         if (minutes >= 60) {
+  //             minutes = 0;
+  //         }
+  //     }
+  //     h1.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+  //     timer();
+  // }
+  //
+  // function timer() {
+  //     t = setTimeout(add, 1000);
+  // }
+  // timer();
 
+  var h1 = document.getElementsByClassName('count')[0], seconds = 0, minutes = 1, t;
   function add() {
-      seconds++;
-      if (seconds >= 60) {
-          seconds = 0;
-          minutes++;
-          if (minutes >= 60) {
-              minutes = 0;
-          }
+      if (seconds == 0) {
+        minutes--;
+        seconds=60;
       }
-
+      seconds--;
       h1.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
       timer();
   }

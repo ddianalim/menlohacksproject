@@ -1,6 +1,6 @@
 .page-title {
   margin: 60px 0 35px;
-} 
+}
 
 .day {
   margin-bottom: 15px;
@@ -16,6 +16,7 @@ body {
     margin-right: 0px!important;
     margin-bottom: 0px!important;
     margin-left: 0px!important;
+    font-family: "HelveticaNeue-Light";
 }
 
 .calendar {
