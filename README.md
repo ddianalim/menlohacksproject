@@ -30,10 +30,8 @@ Home
 - GET `/`
 
 Day
-- GET `/day/breathe`
-- GET `/day/mindfulness`
-- GET `/day/gratitude/new`
-- POST `/day/gratitude/`
+- GET `/day/new`
+- POST `/day/
 
 ## Other
 - mongodb
