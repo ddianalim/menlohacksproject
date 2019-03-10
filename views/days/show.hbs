@@ -7,26 +7,6 @@
   </div>
 
   <div style="text-align: center; margin: 10px;">
-    <p id="feeling">{{day.mindfulness}}</p>
-
-    <script>
-      var level = "{{day.mindfulness}}";
-
-        function showFeelings() {
-          if(level == "9DE09E") {
-            document.getElementById('feeling').innerHTML = "Happy";
-          } else if(level == "CFE9AA") {
-            document.getElementById('feeling').innerHTML = "Pretty good";
-          } else if(level == "F6F0B3") {
-            document.getElementById('feeling').innerHTML = "Alright";
-          } else if(level == "F4C4A4") {
-            document.getElementById('feeling').innerHTML = "Not Good";
-          } else {
-            document.getElementById('feeling').innerHTML = "Terrible";
-          }
-        }
-        showFeelings();
-      </script>
 
     <h2>
       <script>
@@ -39,6 +19,31 @@
         document.write(today);
       </script>
     </h2>
+  </div>
+
+  <div style="text-align: center;">
+    <p id="feeling">Today I feel {{day.mindfulness}}</p>
+
+    <script>
+      var level = "{{day.mindfulness}}";
+
+        function showFeelings() {
+          if(level == "9DE09E") {
+            document.getElementById('feeling').innerHTML = "Today I feel happy";
+          } else if(level == "CFE9AA") {
+            document.getElementById('feeling').innerHTML = "Today I feel pretty good";
+          } else if(level == "F6F0B3") {
+            document.getElementById('feeling').innerHTML = "Today I feel alright";
+          } else if(level == "F4C4A4") {
+            document.getElementById('feeling').innerHTML = "Today I feel not good";
+          } else {
+            document.getElementById('feeling').innerHTML = "Today I feel terrible";
+          }
+        }
+        showFeelings();
+      </script>
+
+    <p>I feel this way because: {{day.feeling}}</p>
   </div>
 
   <div style="text-align: center;">
