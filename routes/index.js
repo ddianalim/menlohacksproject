@@ -6,7 +6,7 @@ const Day = require('../models/day');
 /* GET home page. */
 router.get('/', (req, res) => {
   // 1
-  Day.find({}, (err, days) => {
+  Day.find().sort({ date: +1 }).exec(function(err, days) {
     if (err) {
       console.log(err);
     }
