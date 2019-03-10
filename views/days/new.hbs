@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col">
         <h1 class="page-title">
-          <script> document.write(new Date().toLocaleDateString()); </script>
+          <script> document.write(new Date().toDateString()); </script>
+
         </h1>
     </div>
 </div>
@@ -12,12 +13,6 @@
             <div class="form-row">
                 <div class="form-group col-8 col-lg-6">
                 </div>
-            </div>
-
-            <div class="form-group">
-              <label for="post-date">Date</label>
-              <input type="date" name="date" class="input-text" id="date" placeholder="mm/dd/yyyy" required>
-              <span class="validity"></span>
             </div>
 
            <div class="form-group">
@@ -31,7 +26,13 @@
             <textarea name="gratitude3" class="form-control" id="gratitude3" rows="3" placeholder="I'm looking forward to..."></textarea>
         </div>
 
-              <button type="submit" class="btn btn-primary">Post day</button>
+        <div class="form-group">
+          <label for="post-date">Date</label>
+          <input type="date" name="date" class="input-text" id="date" placeholder="mm/dd/yyyy" required>
+          <span class="validity"></span>
+        </div>
+
+              <button type="submit" class="btn btn-primary">Finished!</button>
           </form>
     </div>
 </div>
