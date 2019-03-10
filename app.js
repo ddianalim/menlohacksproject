@@ -1,3 +1,7 @@
+if (!process.env.PORT) {
+  require('dotenv').config();
+}
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,6 +11,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 
 var app = express();
+require('dotenv').config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +42,7 @@ app.use(function(err, req, res, next) {
 });
 
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://user:menlohacks4@ds113765.mlab.com:13765/perfectlypositive';
+const mongoURI = process.env.mongoURI;
 
 // connect our app with our database
 mongoose.connect(mongoURI)
