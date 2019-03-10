@@ -72,3 +72,7 @@ body {
 #gratitudeList {
   padding: 0 20%;
 }
+
+.btn-outline {
+  border-color: grey;
+}
