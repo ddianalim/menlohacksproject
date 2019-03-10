@@ -17,6 +17,10 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/breathe', (req, res) => {
+  res.render('breathe');
+});
+
 router.get('/days/new', (req, res) => {
   res.render('days/new');
 });
