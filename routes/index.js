@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/breathe', (req, res) => {
+router.get('/breathe/', (req, res) => {
   res.render('breathe');
 });
 
