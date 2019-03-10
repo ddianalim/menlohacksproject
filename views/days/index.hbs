@@ -12,10 +12,9 @@
     <div class="item">Friday</div>
     <div class="item">Saturday</div>
 
-
    {{#each days}}
       <div class="item">
-          <a class="card-link" href="/days/{{this._id}}">
+          <a href="/days/{{this._id}}">
             <script>
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
               if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
