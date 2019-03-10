@@ -2,7 +2,18 @@
   <div class="section cover">
     <div class="row justify-content-around text-center">
       <h1 class="page-title">
-        <script> document.write(new Date().toDateString()); </script>
+        Welcome Back! Today is
+        <script>
+          var today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
+
+          if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
+          } else if (mm == 4) { month = 'April'; } else if (mm == 5) { month = 'May'; } else if (mm == 6) { month = 'June';
+          } else if (mm == 7) { month = 'July'; } else if (mm == 8) { month = 'August'; } else if (mm == 9) { month = 'September';
+          } else if (mm == 10) { month = 'October'; } else if (mm == 11) { month = 'November'; } else { month = 'December';}
+
+          today = month + ' ' + dd + ', ' + yyyy;
+          document.write(today);
+        </script>
       </h1>
     </div>
   </div>
@@ -59,26 +70,23 @@
 
 <style>
 .cover {
-  background-image: linear-gradient(#96e09a, #f9f1b1);
-  min-height: 300px;
+  background-image: linear-gradient(#ef908f, #efca8f);
 }
 
 .first-section {
-  background-image: linear-gradient(#ac96e0, #96cde0);
-  min-height: 700px;
+  background-image: linear-gradient(#f9f1b1, #96e09a);
 }
 
 .second-section {
-  background-image: linear-gradient(#96e09a, #f9f1b1);
-  min-height: 400px;
+  background-image: linear-gradient(#ac96e0, #96cde0);
 }
 
 .third-section {
-  background-image: linear-gradient(#efca8f, #ef908f);
-  min-height: 400px;
+  background-image: linear-gradient(#96cde0, #ef908f);
 }
 
 .section {
+  min-height: 670px;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -93,7 +101,7 @@
   margin-top: 20%;
   margin-left: 46%;
   border-radius: 50%;
-  background-image: radial-gradient(#9bdcff, #eaf7ff);
+  background-image: radial-gradient(#eee, #fff);
   animation: circle 4s ease alternate infinite;
 }
 
@@ -125,58 +133,3 @@
   }
   timer();
 </script>
-
-<!--
-<div class="row">
-    <div class="col">
-        <h1 class="page-title">
-          <script> document.write(new Date().toDateString()); </script>
-        </h1>
-    </div>
-</div>
-
-<div class="row">
-      <h2>Breathe</h2>
-</div>
-
-<div class="row">
-      <h2>Mindfulness</h2>
-</div>
-
-<div class="row">
-    <div class="col">
-      <h2>Gratitude</h2>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col">
-        <form method="POST" action="/days">
-            <div class="form-row">
-                <div class="form-group col-8 col-lg-6">
-                </div>
-            </div>
-
-           <div class="form-group">
-              <label for="gratitude1">This made me smile...</label>
-              <textarea name="gratitude1" class="form-control" id="gratitude1" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-              <label for="gratitude2">What keeps me going...</label>
-              <textarea name="gratitude2" class="form-control" id="gratitude2" rows="3"></textarea>
-         </div>
-         <div class="form-group">
-            <label for="gratitude3">I'm looking forward to...</label>
-            <textarea name="gratitude3" class="form-control" id="gratitude3" rows="3"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="post-date">Date</label>
-          <input type="date" name="date" class="input-text" id="date" placeholder="mm/dd/yyyy" required>
-          <span class="validity"></span>
-        </div>
-
-              <button type="submit" class="btn btn-primary">Finished!</button>
-          </form>
-    </div>
-</div> -->
