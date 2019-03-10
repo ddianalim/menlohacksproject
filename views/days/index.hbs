@@ -15,6 +15,7 @@
    {{#each days}}
       <div class="item">
           <a href="/days/{{this._id}}">
+            <img class="card-img" src="/images/icon.png" alt="Card image">
             <script>
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
               if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
@@ -24,13 +25,13 @@
               today = month + ' ' + dd + ', ' + yyyy;
               document.write(today);
             </script>
-          <img class="card-img" src="/images/icon.png" alt="Card image">
         </a>
       </div>
     {{/each}}
 
     <div class="item">
-      <a class="card-link" href="/days/new">
+      <a href="/days/new">
+        <img class="card-img" src="/images/add.png" alt="Card image">
           <script>
             var today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
             if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
@@ -40,7 +41,6 @@
             today = month + ' ' + dd + ', ' + yyyy;
           document.write(today);
           </script>
-        <img class="card-img" src="/images/add.png" alt="Card image">
       </a>
     </div>
     <div class="item"></div>
