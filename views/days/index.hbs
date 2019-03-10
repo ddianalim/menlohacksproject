@@ -1,18 +1,25 @@
 <div class="post-index">
   <h1 class="page-title">Calendar</h1>
-    <a class="button" href="../days/new">Start Today</a>
 </div>
 
 <div class="row">
+  <div class="col-3">
+    <div class="card day">
+      <div class="card-body">
+        <a class="card-link" href="../days/new">Start Today</a>
+      </div>
+    </div>
+  </div>
+
     {{#each days}}
         <!-- <div class="col-12 col-md-6 col-lg-4"> -->
           <div class="col-3">
-          <div class="card day">
+            <img class="card-img" src="/images/icon.png" alt="Card image cap">
+            <!-- <div class="card day text-right"> -->
+            <div class="card-img-overlay day text-right">
                 <div class="card-body">
                   <a class="card-link" href="/days/{{this._id}}">{{this.date}}</a>
-                  <img class="card-img" src="/images/icon.png" alt="Card image cap">
                 </div>
-
             </div>
         </div>
     {{/each}}
