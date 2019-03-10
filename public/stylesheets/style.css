@@ -1,6 +1,6 @@
 .page-title {
   margin: 60px 0 35px;
-} 
+}
 
 .day {
   margin-bottom: 15px;
@@ -8,6 +8,10 @@
 
 .day-breadcrumb {
   margin: 45px 0 35px;
+}
+
+.home {
+  margin: 50px;
 }
 
 body {
