@@ -15,13 +15,9 @@
    {{#each days}}
       <div class="item">
           <a href="/days/{{this._id}}">
-            <style>
-            .card-img{
-              background-color: {{this.mindfulness}};
-            }
-            </style>
-            <div class="card-img" style="opacity: 50%; height: 100px; width: 100px;"></div>
-            
+
+            <div class="" style="opacity: 50%; height: 100px; width: 100px; background-color: {{this.mindfulness}};"></div>
+
             <script class="test">
             console.log("{{this.mindfulness}}");
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
