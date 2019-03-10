@@ -15,7 +15,25 @@
    {{#each days}}
       <div class="item">
           <a href="/days/{{this._id}}">
-            <img class="card-img" src="/images/icon.png" alt="Card image">
+            <script class="test">
+              var level = {{this.mindfulness}}, icon ='';
+              function changeIcon() {
+                if (level == 1) {
+                  document.getElementsByClassName("card-img").innerHTML='<img src="/images/one.png" alt="Card image 1">';
+                } else if (level == 2) {
+                  document.getElementsByClassName("card-img").innerHTML='<img src="/images/two.png" alt="Card image 2">';
+                } else if (level == 3) {
+                  document.getElementsByClassName("card-img").innerHTML='<img src="/images/three.png" alt="Card image 3">';
+                } else if (level == 4) {
+                  document.getElementsByClassName("card-img").innerHTML='<img src="/images/four.png" alt="Card image 4">';
+                } else {
+                  document.getElementsByClassName("card-img").innerHTML='<img src="/images/five.png" alt="Card image 5">';
+                }
+              }
+              changeIcon();
+            </script>
+
+            <div class="card-img"><img src="/images/icon.png" alt="Card image"></div>
             <script class="test">
               var today = new Date("{{this.date}}"), dd = today.getDate()+1, mm = today.getMonth() + 1, month = '', yyyy = today.getFullYear();
               if (mm == 1) { month = 'January'; } else if (mm == 2) { month = 'February'; } else if (mm == 3) { month = 'March';
