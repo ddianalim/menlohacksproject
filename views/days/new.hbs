@@ -182,7 +182,7 @@ a:hover {
       if (seconds == 0 && minutes == 0) {
         exit;
       }
-      
+
       timer();
   }
 
@@ -194,7 +194,7 @@ a:hover {
   function move() {
     var elem = document.getElementById("bar");
     var width = 1;
-    var id = setInterval(frame, 630);
+    var id = setInterval(frame, 600);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
