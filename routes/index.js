@@ -7,3 +7,19 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+router.get('/days/new', (req, res) => {
+  res.render('days/new');
+});
+
+router.post('/days', (req, res) => {
+  const day = new Day(req.body);
+
+  review.save(function(err, day) {
+    if (err) {
+      console.log(err);
+    }
+
+    return res.redirect('/days/' + day._id);
+  });
+});

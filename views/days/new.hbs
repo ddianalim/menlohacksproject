@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col">
+        <h1 class="page-title">New day</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form method="POST" action="/days">
+            <div class="form-row">
+                <div class="form-group col-8 col-lg-6">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="post-date">Date</label>
+              <input type="date" name="date" class="input-text" id="date" placeholder="mm/dd/yyyy" required>
+              <span class="validity"></span>
+            </div>
+
+           <div class="form-group">
+              <label for="dayGratitude">Gratitude</label>
+              <textarea name="gratitude1" class="form-control" id="gratitude1" rows="3" placeholder="What made you smile..."></textarea>
+          </div>
+          <div class="form-group">
+             <textarea name="gratitude2" class="form-control" id="gratitude2" rows="3" placeholder="What keeps me going..."></textarea>
+         </div>
+         <div class="form-group">
+            <textarea name="gratitude3" class="form-control" id="gratitude3" rows="3" placeholder="I'm looking forward to..."></textarea>
+        </div>
+
+              <button type="submit" class="btn btn-primary">Post day</button>
+          </form>
+    </div>
+</div>
