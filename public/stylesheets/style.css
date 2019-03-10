@@ -10,6 +10,19 @@
   margin: 45px 0 35px;
 }
 
+.some-margin {
+  margin: 50px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
 body {
     margin: 0!important;
     margin-top: 0px!important;
@@ -17,6 +30,7 @@ body {
     margin-bottom: 0px!important;
     margin-left: 0px!important;
     font-family: "HelveticaNeue-Light";
+/*     font-family: serif; */
 }
 
 .calendar {

@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DaySchema = new Schema({
-  date: { type: Date, default: Date.now},
+  date: { type: Date, default: Date.now },
+  mindfulness: { type: Number, required: true },
   gratitude1: { type: String, required: true },
   gratitude2: { type: String, required: true },
   gratitude3: { type: String, required: true }
