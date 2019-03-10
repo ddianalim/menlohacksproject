@@ -25,6 +25,9 @@
 
   <div class="section first-section" id="breathe">
     <div class="col justify-content-center text-center">
+      <div id="progress">
+        <div id="bar"></div>
+      </div>
       <h2>Breathe</h2>
       <h1><time class="text-center count" style="font-size: .9em">01:00</time></h1>
       <div class="circle"></div>
@@ -181,4 +184,20 @@ a:hover {
       t = setTimeout(add, 1000);
   }
   timer();
-</script>
+
+  function move() {
+    var elem = document.getElementById("bar");
+    var width = 1;
+    var id = setInterval(frame, 630);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width++;
+        elem.style.width = width + '%';
+      }
+    }
+  }
+  move();
+
+  </script>
