@@ -39,6 +39,7 @@ body {
   float: left;
   flex: 1 1 calc(14.2857143%);
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .item {
